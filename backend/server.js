@@ -9,6 +9,9 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+const authRouter = require('./routes/auth');
+app.use('/auth',authRouter)
+
 //Connect to MONGODB
 const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017/';
 mongoose.connect(uri)
