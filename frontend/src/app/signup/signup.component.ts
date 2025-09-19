@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClient} from '@angular/common/http';
-import { environments } from '../../environments/environment.prod'; 
+import { environment } from '../../environments/environment.prod'; 
 
 @Component({
   selector: 'app-signup',
@@ -17,7 +17,7 @@ export class SignupComponent {
   message = '';
 
   // Use the API URL from the environment configuration
-  private apiUrl = environments.apiUrl;
+  private apiUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) {}
 

@@ -15,7 +15,7 @@ app.use('/auth',authRouter)
 //Connect to MONGODB
 const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017/';
 mongoose.connect(uri)
-.then(()=> console.log('MongoDB conneted..'))
+.then(()=> console.log('MongoDB connected..'))
 .catch(err=> console.error(err));
 
 app.get('/',(req,res)=>{
